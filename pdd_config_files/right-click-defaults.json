@@ -1,0 +1,93 @@
+{
+  "codingInterface": {
+    "actions": [
+      {
+        "id": 1,
+        "name": "Correct this code",
+        "prompt": "Please provide a corrected version of this code: {highlighted}. Here is the context: {context}",
+        "model": "openai:gpt-4",
+        "systemMessage": "You are a helpful AI assistant specializing in code correction.",
+        "category": "Debugging/Fixing",
+        "contextAmount": 4
+      },
+      {
+        "id": 2,
+        "name": "Add logging",
+        "prompt": "Please add logging to this code: {highlighted}. Here is the context: {context}",
+        "model": "openai:gpt-4",
+        "systemMessage": "You are a helpful AI assistant specializing in adding logging to code.",
+        "category": "Improving",
+        "contextAmount": 4
+      }
+    ],
+    "generalActions": [
+      {
+        "id": 3,
+        "name": "Update ARCHITECTURE.md",
+        "prompt": "Please review the current ARCHITECTURE.md file and provide a complete and correct version based on incorporating recent changes in the project. Here is the context: {context}",
+        "model": "openai:gpt-4",
+        "systemMessage": "You are a helpful AI assistant specializing in software architecture documentation.",
+        "category": "Improving",
+        "contextAmount": 8,
+        "isGeneralAction": true,
+        "targetFile": "ARCHITECTURE.md"
+      },
+      {
+        "id": 4,
+        "name": "Update README.md",
+        "prompt": "Please review the current README.md file and provide a complete and correct version based on incorporating recent changes in the project. Here is the context: {context}",
+        "model": "openai:gpt-4",
+        "systemMessage": "You are a helpful AI assistant specializing in project documentation.",
+        "category": "Improving",
+        "contextAmount": 8,
+        "isGeneralAction": true,
+        "targetFile": "README.md"
+      },
+      {
+        "id": 5,
+        "name": "Correct entire file",
+        "prompt": "Please review and provide a corrected version of this entire file: {fileContent}. Here is the context: {context}",
+        "model": "openai:gpt-4",
+        "systemMessage": "You are a helpful AI assistant specializing in code review and correction.",
+        "category": "Debugging/Fixing",
+        "contextAmount": 8,
+        "isGeneralAction": true,
+        "targetFile": null
+      },
+      {
+        "id": 6,
+        "name": "Create Plan for File",
+        "prompt": "Please review the entire file content and create a comprehensive plan based on the user's instructions. File content: {fileContent}. User instructions: {userInstructions}. Context: {context}",
+        "model": "openai:gpt-4",
+        "systemMessage": "The assistant is a expert in planning and strategic advice. The user requires a careful review of the content provided according to the instructions they give. The assistant will use a structured thought process to consider a response to the user's instructions. This thought process will include three different steps. The first step will be to reflect on the instructions and context provided, which the assistant will do within <reflecting> tags. The second step will usually be to apply critical thought to the reflections, using <thinking> tags. The third step will be articulating a plan with <planning> tags. The assistant will aim to provide a comprehensive <response> at the end of the thought process. The assistant can repeat the thought process as many times as necessary, and must include no fewer than two reflections and two thoughts when generating a response. Multiple reflections cannot be made consecutively.",
+        "category": "Planning",
+        "contextAmount": 8,
+        "isGeneralAction": true,
+        "targetFile": null,
+        "requiresInstruction": true
+      }
+    ]
+  },
+  "inferenceInterface": {
+    "actions": [
+      {
+        "id": 1,
+        "name": "Clarify",
+        "prompt": "Please clarify your previous response, focusing on {selectedText}.",
+        "icon": "help"
+      },
+      {
+        "id": 2,
+        "name": "Expand",
+        "prompt": "Please provide more details or examples related to {selectedText}.",
+        "icon": "create"
+      },
+      {
+        "id": 3,
+        "name": "Summarize",
+        "prompt": "Please summarize the key points of your previous response, with emphasis on {selectedText}.",
+        "icon": "refresh"
+      }
+    ]
+  }
+}
