@@ -5,12 +5,12 @@
       "unit": "1K tokens",
       "currency": "USD"
     },
-    "gpt-4": {
+    "gpt-4o": {
       "price": 0.06,
       "unit": "1K tokens",
       "currency": "USD"
     },
-    "gpt-4-turbo-preview": {
+    "gpt-4o-mini": {
       "price": 0.03,
       "unit": "1K tokens",
       "currency": "USD"
@@ -19,11 +19,6 @@
   "anthropic": {
     "claude-3-opus-20240229": {
       "price": 0.015,
-      "unit": "1K tokens",
-      "currency": "USD"
-    },
-    "claude-3-sonnet-20240229": {
-      "price": 0.003,
       "unit": "1K tokens",
       "currency": "USD"
     },
