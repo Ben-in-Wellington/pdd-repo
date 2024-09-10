@@ -31,7 +31,12 @@
       "price": 0.00025,
       "unit": "1K tokens",
       "currency": "USD"
-    }
+    },
+    "claude-3-5-sonnet-20240620": {
+      "price": 0.015,
+      "unit": "1K tokens",
+      "currency": "USD"
+    },
   },
   "google": {
     "gemini-1.5-pro": {
