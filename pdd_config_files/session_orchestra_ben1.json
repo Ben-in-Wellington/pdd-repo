@@ -1,0 +1,53 @@
+{
+  "name": "Ben's Coding Orchestra",
+  "modelType": "orchestra",
+  "categories": ["coding", "debugging", "reasoning"],
+  "complexityLevels": [
+    { "level": 1, "description": "A simple task" },
+    { "level": 2, "description": "A typical task" },
+    { "level": 3, "description": "A complex task" }
+  ],
+  "modelSelections": {
+    "coding": {
+      "1": { "family": "anthropic", "model": "claude-3-haiku-20240307" },
+      "2": { "family": "anthropic", "model": "claude-3-5-sonnet-20240620" },
+      "3": { "family": "anthropic", "model": "claude-3-5-sonnet-20240620" }
+    },
+    "debugging": {
+      "1": { "family": "openai", "model": "gpt-4o-mini" },
+      "2": { "family": "openai", "model": "gpt-4o" },
+      "3": { "family": "openai", "model": "gpt-4o" }
+    },
+    "reasoning": {
+      "1": { "family": "anthropic", "model": "claude-3-haiku-20240307" },
+      "2": { "family": "anthropic", "model": "claude-3-5-sonnet-20240620" },
+      "3": { "family": "anthropic", "model": "claude-3-5-sonnet-20240620" }
+    }
+  },
+  "systemMessages": {
+    "coding": {
+      "1": "The assistant is a programming expert.",
+      "2": "The assistant is a programming expert.",
+      "3": "The assistant is a programming expert."
+    },
+    "debugging": {
+      "1": "You are an expert in debugging code.",
+      "2": "You are an expert in debugging code.",
+      "3": "You are an expert in debugging code."
+    },
+    "reasoning": {
+      "1": "You will use a structured thought process to formulate your response. The thought process has three components: reflections, thoughts and plans. You will use <reflecting> tags when you want to reflect on something that is in the past, such as the content in the prior messages from the user and assistant. You will use <thinking> tags to articulate your thoughts about your reflections. You will use <planning> tags when you want to articulate a plan based on your reflections and thoughts. You can use any order of reflections, thoughts and plans and you will always strive to have at least two reflections and two thoughts. Your final response will be presented with <voice> tags, whereby you will vocalise your final response to the query.",
+      "2": "You will use a structured thought process to formulate your response. The thought process has three components: reflections, thoughts and plans. You will use <reflecting> tags when you want to reflect on something that is in the past, such as the content in the prior messages from the user and assistant. You will use <thinking> tags to articulate your thoughts about your reflections. You will use <planning> tags when you want to articulate a plan based on your reflections and thoughts. You can use any order of reflections, thoughts and plans and you will always strive to have at least two reflections and two thoughts. Your final response will be presented with <voice> tags, whereby you will vocalise your final response to the query.",
+      "3": "You will use a structured thought process to formulate your response. The thought process has three components: reflections, thoughts and plans. You will use <reflecting> tags when you want to reflect on something that is in the past, such as the content in the prior messages from the user and assistant. You will use <thinking> tags to articulate your thoughts about your reflections. You will use <planning> tags when you want to articulate a plan based on your reflections and thoughts. You can use any order of reflections, thoughts and plans and you will always strive to have at least two reflections and two thoughts. Your final response will be presented with <voice> tags, whereby you will vocalise your final response to the query."
+    }
+  },
+  "conductorConfig": {
+    "model": "openai:gpt-4o-mini",
+    "excerptLength": 50,
+    "outputFormat": "json",
+    "temperature": 0.7,
+    "topP": 1
+  },
+  "latentVault": true,
+  "latentHub": false
+}
